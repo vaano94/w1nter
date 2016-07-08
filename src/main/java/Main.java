@@ -2,8 +2,6 @@ import com.animal.Fox;
 import com.animal.Mouse;
 import com.bear.Bear;
 import com.exception.ClasspathSearchException;
-import com.exception.WinterAlreadyCreatedException;
-import com.exception.WinterCreationDeniedException;
 import org.apache.log4j.Logger;
 
 public class Main {
@@ -26,8 +24,8 @@ public class Main {
 
         } catch (WinterAlreadyCreatedException e) {
                 logger.error("The class is already created :" + e.getMessage());
-        } catch (WinterCreationDeniedException e) {
-        } catch (ClasspathSearchException e) {
+        }
+        catch (ClasspathSearchException e) {
                 logger.error("Can not search classes in main catalogue" + e);
         }
 
